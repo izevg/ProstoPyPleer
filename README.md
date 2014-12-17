@@ -80,6 +80,10 @@ Args:
     my_pleer = pleer.Pleer()
     
 #### Recieving __full__ tracklist by custom request (with created Pleer object as it was described earlier):
+    query = {
+        'query': 'artist:Red hot chilli peppers',
+        'quality': 'best'
+    }
     search_result = my_pleer.search_for_track(my_pleer.token, query) # If Pleer was created with args and
     token = my_pleer.get_access_token(app_id, app_secret_key) # if not, recieving the token and
     search_result = my_pleer.search_for_track(token, query) # then recieving the tracklist
